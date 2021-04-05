@@ -1,0 +1,39 @@
+.quantity-container{
+    position: relative;
+}
+.quantity-popup-wrapper{
+    position: absolute;
+    top: 0;
+    border: 1px solid transparent;
+    box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 15%);
+    background-color: white;
+    border-radius: 16px;
+    padding: 10px 33px;
+    z-index: 1;
+    width: 300px;
+}
+.quantity-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 50px;
+    color: black;
+}
+
+.quantity-body img{
+    cursor: pointer;
+}
+.quantity-hr{
+    margin: 13px 0px;
+}
+.quantity-footer{
+    margin-top: 10px;
+    text-align: end;
+}
+.quantity-footer button{
+    border: 1px solid;
+    padding: 8px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    width: auto;
+}

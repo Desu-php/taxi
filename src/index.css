@@ -230,6 +230,11 @@ button {
     font-weight: 700
 }
 
+
+.display-none {
+    display: none !important;
+}
+
 .container {
     max-width: 1016px;
     margin: 0 auto;
@@ -265,7 +270,8 @@ button {
     -ms-flex-align: center;
     align-items: center;
     background-color: #fff;
-    z-index: 7
+    z-index: 7;
+    top: 0;
 }
 
 .header-content {
@@ -449,7 +455,7 @@ button {
 
 .main-screen__search {
     margin: 115px auto 0;
-    width: 928px;
+    width: 1006px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -460,7 +466,6 @@ button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    overflow: hidden;
     position: relative
 }
 
@@ -468,7 +473,8 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100%
+    height: 100%;
+    padding: 2px 0;
 }
 
 .main-screen__search-buttons button {
@@ -486,11 +492,6 @@ button {
 
 .main-screen__search-buttons button + button {
     border-left: 1px solid #dedede
-}
-
-.main-screen__btn-left button {
-    color: #708c91;
-    width: 240px
 }
 
 .button-circle {
@@ -2433,6 +2434,14 @@ button {
     display: none;
     color: #fff;
     font-size: 12px
+}
+
+/*global*/
+
+.search-input{
+    outline: none;
+    border: none;
+    color: #708c91;
 }
 
 @media (max-width: 990px) {

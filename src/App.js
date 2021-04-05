@@ -4,13 +4,15 @@ import Footer from "./components/footer/Footer";
 import Main from "./components/pages/main/Main";
 
 function App() {
-  return (
-    <div className="App">
-        <Header/>
-            <Main/>
-        <Footer/>
-    </div>
-  );
+    return (
+
+            <div className="App">
+                <Header/>
+                <Main/>
+                <Footer/>
+            </div>
+
+    );
 }
 
 export default App;

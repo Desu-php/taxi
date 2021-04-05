@@ -1,0 +1,10 @@
+.search-input{
+    outline: none;
+    border: none;
+    color: #708c91;
+}
+.search-input-date{
+    padding: 0 4px;
+    width: 144px;
+    border-right: 1px solid rgb(237, 237, 237);;
+}
