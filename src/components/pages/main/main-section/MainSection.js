@@ -44,8 +44,8 @@ export default function MainSection(){
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                              className="kirk-icon sc-fjdhpX kbtLKY" width="24"
                              height="24" aria-hidden="true">
-                            <g fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                               stroke-miterlimit="10">
+                            <g fill="none" stroke="#FFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                               strokeMiterlimit="10">
                                 <line x1="22" y1="22" x2="16.4" y2="16.4"></line>
                                 <circle cx="10" cy="10" r="9"></circle>
                             </g>

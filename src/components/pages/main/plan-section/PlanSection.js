@@ -1,4 +1,5 @@
 import React from "react";
+import RouteCard from "./route-card/RouteCard";
 
 export default function  PlanSection(){
     return(
@@ -22,36 +23,9 @@ export default function  PlanSection(){
                 <div className="container">
                     <div className="plan__bottom-title">Куда вы хотите поехать?</div>
                     <div className="plan__bottom-items">
-                        <a href="#" className="plan-item">
-                            <div className="plan-item__content">
-                                <div className="plan-item__content-text">Москва</div>
-                                <div className="plan-item__content-text">С.-Петербург</div>
-                            </div>
-                            <div className="plan-item__price">
-                                <span>600 р.</span>
-                                <span><img src="images/icons/iconsvg.svg" alt="img"/></span>
-                            </div>
-                        </a>
-                        <a href="#" className="plan-item">
-                            <div className="plan-item__content">
-                                <div className="plan-item__content-text">Москва</div>
-                                <div className="plan-item__content-text">С.-Петербург</div>
-                            </div>
-                            <div className="plan-item__price">
-                                <span>600 р.</span>
-                                <span><img src="images/icons/iconsvg.svg" alt="img"/></span>
-                            </div>
-                        </a>
-                        <a href="#" className="plan-item">
-                            <div className="plan-item__content">
-                                <div className="plan-item__content-text">Москва</div>
-                                <div className="plan-item__content-text">С.-Петербург</div>
-                            </div>
-                            <div className="plan-item__price">
-                                <span>600 р.</span>
-                                <span><img src="images/icons/iconsvg.svg" alt="img"/></span>
-                            </div>
-                        </a>
+                       <RouteCard first_text={"Таджикистан/Худжанд"} second_text={"Узбекистан/Ташкент"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
                     </div>
                     <div className="plan__bottom-populars link">
                         <a href="#">Популярные маршруты</a>

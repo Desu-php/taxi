@@ -1,5 +1,5 @@
 .select-search {
-    width: 300px;
+    min-width: 250px;
     position: relative;
     font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;

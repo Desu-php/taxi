@@ -455,7 +455,7 @@ button {
 
 .main-screen__search {
     margin: 115px auto 0;
-    width: 1006px;
+    width: 900px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
