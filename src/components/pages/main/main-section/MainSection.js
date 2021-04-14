@@ -24,7 +24,7 @@ export default function MainSection(){
     return(
         <section className="main-screen">
             <div className="container">
-                <div className="main-screen__title">В путь по-вашему</div>
+                <h1 className="main-screen__title">В путь по-вашему</h1>
                 <div className="main-screen__search">
                     <div className="main-screen__search-buttons">
                         <div className="main-screen__search-buttons main-screen__btn-left">
