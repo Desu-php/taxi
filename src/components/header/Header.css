@@ -1,3 +1,106 @@
+.header {
+    position: fixed;
+    height: 72px;
+    padding-left: 24px;
+    padding-right: 16px;
+    padding: 12px 30px 12px 38px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 7;
+    top: 0;
+}
+
+.header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.header__item, .header__btn, .header__logo {
+    margin-right: 24px
+}
+
+.header__logo--mobile {
+    display: none
+}
+
+.header__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.header__btn span {
+    margin-right: 8px
+}
+
+.header__profile-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer
+}
+
+.header__profile-wrapper.active .header__profile-arrow {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
 .profile-box .active{
     display: block !important;
+}
+
+@media (max-width: 990px) {
+    .header__profile {
+        display: none
+    }
+
+    .header__btn-text {
+        display: none
+    }
+
+    .header__item {
+        display: none
+    }
+
+    .header__logo--mobile {
+        display: block
+    }
+
+    .header__logo {
+        display: none
+    }
+
+    .header__btn + .header__btn {
+        margin-right: 0
+    }
+
+    .header__profile-img, .header__profile-img img {
+        width: 25px;
+        height: 25px
+    }
+
+    .header {
+        padding: 0 16px;
+        height: 56px
+    }
 }

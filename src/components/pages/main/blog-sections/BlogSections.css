@@ -1,0 +1,25 @@
+.news {
+  padding: 24px 0
+}
+
+.news__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 24px
+}
+
+.news__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+@media (max-width: 800px) {
+  .news {
+    display: none
+  }
+}

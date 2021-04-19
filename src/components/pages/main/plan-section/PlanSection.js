@@ -1,4 +1,5 @@
 import React from "react";
+import './PlanSection.css'
 import RouteCard from "./route-card/RouteCard";
 
 export default function  PlanSection(){

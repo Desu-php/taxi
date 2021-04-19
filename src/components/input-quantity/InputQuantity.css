@@ -38,6 +38,15 @@
     width: auto;
 }
 
+@media (max-width: 990px) {
+    .quantity-container{
+        flex-basis: 50%;
+    }
+    .search-input-date{
+        flex-basis: 50%;
+    }
+}
+
 @media (max-width: 650px) {
     .quantity-popup-wrapper{
         position: fixed;

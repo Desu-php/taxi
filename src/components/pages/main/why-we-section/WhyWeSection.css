@@ -1,0 +1,39 @@
+.why-we__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 24px 0
+}
+
+.why-we__item {
+  max-width: 290px;
+  width: 100%
+}
+
+.why-we__item + .why-we__item {
+  margin-left: 45px
+}
+
+.why-we__item-icon {
+  margin-bottom: 8px
+}
+
+.why-we__item-icon svg {
+  fill: #708c91
+}
+
+@media (max-width: 700px) {
+  .why-we__inner {
+    display: block
+  }
+
+  .why-we__item {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 24px
+  }
+
+  .why-we__item + .why-we__item {
+    margin-left: 0
+  }
+}
