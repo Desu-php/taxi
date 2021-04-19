@@ -1,25 +1,10 @@
 import React,{useState} from 'react'
 import './MainSection.css'
-import SelectSearch from 'react-select-search';
 import CustomSelectSearch from "../../../select-search/CustomSelectSearch";
 import InputQuantity from "../../../input-quantity/InputQuantity";
-// import SelectSearch from "./select-search/SelectSearch";
+
 
 export default function MainSection(){
-    const [from, setFrom] = useState('')
-    const [to, setTo] = useState('')
-
-    const options = [
-        {name: 'Swedish', value: 'sv'},
-        {name: 'English', value: 'en'},
-        {
-            type: 'group',
-            name: 'Group name',
-            items: [
-                {name: 'Spanish', value: 'es'},
-            ]
-        },
-    ];
 
     return(
         <section className="main-screen">

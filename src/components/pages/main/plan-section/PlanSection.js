@@ -26,6 +26,10 @@ export default function  PlanSection(){
                        <RouteCard first_text={"Таджикистан/Худжанд"} second_text={"Узбекистан/Ташкент"} price={"600"}/>
                        <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
                        <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
                     </div>
                     <div className="plan__bottom-populars link">
                         <a href="#">Популярные маршруты</a>

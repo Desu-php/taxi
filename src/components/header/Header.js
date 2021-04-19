@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Header.css'
+import ProfileMenu from "./profile-menu/ProfileMenu";
 
 export default function Header() {
+    const [showMenu, setShowMenu] = useState(false)
+
     return (
         <header className="header">
             <div className="header-content">
@@ -16,27 +19,9 @@ export default function Header() {
                         <div className="header__profile-img">
                             <img src="images/passenger-m-02.svg" alt="img"/>
                         </div>
-                        <div className="header__profile-arrow"><img src="images/icons/arrow-down.svg" alt="img"/></div>
+                        <div className="header__profile-arrow" onClick={() => setShowMenu(!showMenu)}><img src="images/icons/arrow-down.svg" alt="img"/></div>
                     </div>
-                    <nav className="profile-box">
-                        <ul className="profile-box__list">
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/home.svg"
-                                                                               alt="img"/><span>Управление</span></a>
-                            </li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/vashi-poezdki.svg"
-                                                                               alt="img"/><span>Ваши поездки</span></a>
-                            </li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/vhodashie.svg"
-                                                                               alt="img"/><span>Входящие</span></a></li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/profile.svg"
-                                                                               alt="img"/><span>Профиль</span></a>
-                            </li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/pay.svg"
-                                                                               alt="img"/><span>Оплата</span></a></li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/exit.svg"
-                                                                               alt="img"/><span>Выйти</span></a></li>
-                        </ul>
-                    </nav>
+                    <ProfileMenu active={showMenu} />
                 </div>
             </div>
             <div className="header__logo--mobile">
@@ -62,32 +47,14 @@ export default function Header() {
                     <span className="header__btn-text">Предложить поездку</span>
                 </a>
                 <div className="header__profile">
-                    <div className="header__profile-wrapper">
+                    <div className="header__profile-wrapper" >
                         <div className="header__profile-username">Махмуд</div>
                         <div className="header__profile-img">
                             <img src="images/passenger-m-02.svg" alt="img"/>
                         </div>
-                        <div className="header__profile-arrow"><img src="images/icons/arrow-down.svg" alt="img"/></div>
+                        <div className="header__profile-arrow" onClick={() => setShowMenu(!showMenu)}><img src="images/icons/arrow-down.svg" alt="img"/></div>
                     </div>
-                    <nav className="profile-box">
-                        <ul className="profile-box__list">
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/home.svg"
-                                                                               alt="img"/><span>Управление</span></a>
-                            </li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/vashi-poezdki.svg"
-                                                                               alt="img"/><span>Ваши поездки</span></a>
-                            </li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/vhodashie.svg"
-                                                                               alt="img"/><span>Входящие</span></a></li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/profile.svg"
-                                                                               alt="img"/><span>Профиль</span></a>
-                            </li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/pay.svg"
-                                                                               alt="img"/><span>Оплата</span></a></li>
-                            <li className="profile-box__line"><a href="#"><img src="images/icons/exit.svg"
-                                                                               alt="img"/><span>Выйти</span></a></li>
-                        </ul>
-                    </nav>
+                    <ProfileMenu active={showMenu} />
                 </div>
             </div>
         </header>
