@@ -1,25 +1,36 @@
-import React from 'react'
-import './ProfileMenu.css'
+import React, {useEffect, useState} from 'react'
+import useComponentVisible from "../../../hooks/useComponentVisible";
+import ProfileMenuList from "./profile-menu-list/ProfileMenuList";
 
-export default function ProfileMenu({active}){
+export default function ProfileMenu({mobile = ''}){
+
+    const [showMenu, setShowMenu] = useState(false)
+    const { ref, isComponentVisible } = useComponentVisible(true);
+
+    useEffect(() => {
+        if (!isComponentVisible){
+            setShowMenu(false)
+        }
+    }, [isComponentVisible])
+
+    const showMenuDropDown = () => {
+        if (isComponentVisible){
+            setShowMenu(!showMenu)
+        }else {
+            setShowMenu(false)
+        }
+    }
+
     return(
-        <nav className={`profile-box ${active?"active":''}`}>
-            <ul className="profile-box__list">
-                <li className="profile-box__line"><a href="#"><img src="images/icons/home.svg"
-                                                                   alt="img"/><span>Управление</span></a>
-                </li>
-                <li className="profile-box__line"><a href="#"><img src="images/icons/vashi-poezdki.svg"
-                                                                   alt="img"/><span>Ваши поездки</span></a>
-                </li>
-                <li className="profile-box__line"><a href="#"><img src="images/icons/vhodashie.svg"
-                                                                   alt="img"/><span>Входящие</span></a></li>
-                <li className="profile-box__line"><a href="#"><img src="images/icons/profile.svg"
-                                                                   alt="img"/><span>Профиль</span></a>
-                </li>
-                <li className="profile-box__line"><a href="#"><img src="images/icons/pay.svg"
-                                                                   alt="img"/><span>Оплата</span></a></li>
-                <li className="profile-box__line"><a href="#"><img src="images/icons/exit.svg" alt="img"/><span>Выйти</span></a></li>
-            </ul>
-        </nav>
+        <div className={`header__profile ${mobile}`}>
+            <div className="header__profile-wrapper" ref={ref}  onClick={showMenuDropDown}>
+                <div className="header__profile-username">Махмуд</div>
+                <div className="header__profile-img">
+                    <img src="images/passenger-m-02.svg" alt="img"/>
+                </div>
+                <div className="header__profile-arrow" ><img src="images/icons/arrow-down.svg" alt="img"/></div>
+            </div>
+            <ProfileMenuList active={showMenu}/>
+        </div>
     )
 }

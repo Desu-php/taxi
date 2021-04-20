@@ -1787,6 +1787,9 @@ button {
     font-size: 12px
 }
 
+.d-none{
+    display: none !important;
+}
 /*global*/
 
 .search-input{

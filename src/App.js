@@ -1,18 +1,17 @@
 import './App.css';
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import Main from "./components/pages/main/Main";
-
+import {BrowserRouter} from "react-router-dom";
+import Routes from "./Routes";
 function App() {
     return (
-
-            <div className="App">
+        <div className="App">
+            <BrowserRouter>
                 <Header/>
-                <Main/>
+                <Routes/>
                 <Footer/>
-            </div>
-
+            </BrowserRouter>
+        </div>
     );
 }
-
 export default App;

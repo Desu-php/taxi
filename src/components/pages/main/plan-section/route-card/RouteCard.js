@@ -1,9 +1,9 @@
 import React from 'react'
 import './RouteCard.css'
 
-export default function RouteCard({first_text, second_text, price}){
+export default function RouteCard({first_text, second_text, price, show = true}){
     return(
-        <a href="#" className="plan-item">
+        <a href="#" className={`plan-item ${show?"":"d-none"}`}>
             <div className="plan-item__content">
                 <div className="plan-item__content-text">
                     {first_text}
