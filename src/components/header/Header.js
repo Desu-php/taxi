@@ -1,10 +1,10 @@
-import React,{useState} from 'react'
+import React, {} from 'react'
 import './Header.css'
 import ProfileMenu from "./profile-menu/ProfileMenu";
 import {NavLink} from "react-router-dom";
 
+
 export default function Header() {
-    const [showMenu, setShowMenu] = useState(false)
 
     return (
         <header className="header">
@@ -14,16 +14,7 @@ export default function Header() {
                 </NavLink>
                 <a href="#" className="header__item link">с попутчиками</a>
                 <a href="#" className="header__item link">на автобусе</a>
-                <div className="header__profile header__profile--mobile">
-                    <div className="header__profile-wrapper">
-                        <div className="header__profile-username">Махмуд</div>
-                        <div className="header__profile-img">
-                            <img src="images/passenger-m-02.svg" alt="img"/>
-                        </div>
-                        <div className="header__profile-arrow" onClick={() => setShowMenu(!showMenu)}><img src="images/icons/arrow-down.svg" alt="img"/></div>
-                    </div>
-                    <ProfileMenu active={showMenu} />
-                </div>
+              <ProfileMenu mobile={"header__profile--mobile"} />
             </div>
             <div className="header__logo--mobile">
                 <svg viewBox="0 0 1199.96 1014.39" width="33">
@@ -47,16 +38,7 @@ export default function Header() {
                     <span><img src="images/icons/plus.svg" alt="plus"/></span>
                     <span className="header__btn-text">Предложить поездку</span>
                 </a>
-                <div className="header__profile">
-                    <div className="header__profile-wrapper" >
-                        <div className="header__profile-username">Махмуд</div>
-                        <div className="header__profile-img">
-                            <img src="images/passenger-m-02.svg" alt="img"/>
-                        </div>
-                        <div className="header__profile-arrow" onClick={() => setShowMenu(!showMenu)}><img src="images/icons/arrow-down.svg" alt="img"/></div>
-                    </div>
-                    <ProfileMenu active={showMenu} />
-                </div>
+               <ProfileMenu/>
             </div>
         </header>
     )
