@@ -4,6 +4,7 @@ import PlanSection from "./plan-section/PlanSection";
 import QuestionSection from "./question-sesction/QuestionSection";
 import WhyWeSection from "./why-we-section/WhyWeSection";
 import BlogSections from "./blog-sections/BlogSections";
+import './Main.css'
 
 export default function Main(){
     return (

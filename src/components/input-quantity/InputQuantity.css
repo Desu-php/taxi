@@ -38,6 +38,11 @@
     width: auto;
 }
 
+.main-screen__btn-quantity{
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 990px) {
     .quantity-container{
         flex-basis: 50%;
