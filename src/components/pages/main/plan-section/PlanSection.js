@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import './PlanSection.css'
 import RouteCard from "./route-card/RouteCard";
 
 export default function  PlanSection(){
+    const [show, setShow] = useState(false)
     return(
         <section className="plan">
             <div className="plan__top">
@@ -27,13 +28,16 @@ export default function  PlanSection(){
                        <RouteCard first_text={"Таджикистан/Худжанд"} second_text={"Узбекистан/Ташкент"} price={"600"}/>
                        <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
                        <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
-                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
-                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
-                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
-                       <RouteCard first_text={"Москва"} second_text={"С.-Петербург"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} show={show} second_text={"С.-Петербург"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} show={show} second_text={"С.-Петербург"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} show={show} second_text={"С.-Петербург"} price={"600"}/>
+                       <RouteCard first_text={"Москва"} show={show} second_text={"С.-Петербург"} price={"600"}/>
                     </div>
                     <div className="plan__bottom-populars link">
-                        <a href="#">Популярные маршруты</a>
+                        <a href="#" onClick={(e) => {
+                            e.preventDefault();
+                            setShow(!show)
+                        }}>Популярные маршруты</a>
                     </div>
                 </div>
             </div>

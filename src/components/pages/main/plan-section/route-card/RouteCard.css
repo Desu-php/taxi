@@ -21,10 +21,6 @@
   margin-left: 16px;
 }
 
-.plan-item:nth-child(n+4) {
-  display: none;
-}
-
 .plan-item:hover {
   background-color: #d6d6d6
 }

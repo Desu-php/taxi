@@ -1,10 +1,25 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './InputQuantity.css'
 import useComponentVisible from "../../hooks/useComponentVisible";
 export default function InputQuantity({color}) {
     const [value, setValue] = useState(1)
     const [show, setShow] = useState(false)
-    const { ref, isComponentVisible,setIsComponentVisible } = useComponentVisible(true);
+    const { ref, isComponentVisible } = useComponentVisible(true);
+
+    useEffect(() => {
+        if (!isComponentVisible){
+            setShow(false)
+        }
+    }, [isComponentVisible])
+
+    const showMenuDropDown = () => {
+        if (isComponentVisible){
+            setShow(!show)
+        }else {
+            setShow(false)
+        }
+    }
+
     const onMinus = () => {
         if (value > 1) {
             setValue(value - 1)
@@ -31,10 +46,7 @@ export default function InputQuantity({color}) {
     }
     return (
         <div ref={ref}  className={"quantity-container"}>
-            <button className="main-screen__btn main-screen__btn-quantity" onClick={() => {
-                setShow(true)
-                setIsComponentVisible(true)
-            }}>
+            <button className="main-screen__btn main-screen__btn-quantity" onClick={showMenuDropDown}>
               <span className="button-icon">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="kirk-icon sc-fjdhpX hvLyfg"
                      width="24" height="24" aria-hidden="true">
@@ -45,7 +57,7 @@ export default function InputQuantity({color}) {
               </span>
                 <span className="button-text" style={{color:color}}>{value} {getNoun(value,'пассажир', 'пассажиров', 'пассажира')}</span>
             </button>
-            {(show & isComponentVisible) ? <div ref={ref}  className={"quantity-popup-wrapper"}>
+            {show ? <div ref={ref}  className={"quantity-popup-wrapper"}>
                 <div className={"quantity-popup-header"}>
                     {value} {getNoun(value,'пассажир', 'пассажиров', 'пассажира')}
                 </div>
